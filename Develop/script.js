@@ -11,27 +11,24 @@ $(document).ready(function() {
     // Make 3 columns with classes: col-1, col-10, col-1
         // Hour col-1
         var hourCol = $("<div>");
-        hourCol.addClass("col-1");
+        hourCol.addClass("col-1 hour");
         // Entry Field col-10
         var entryCol = $("<div>");
+        var textSpot = $("<textarea>");
         entryCol.addClass("col-10");
         // Save Button col-1
         var saveCol = $("<div>");
-        saveCol.addClass("col-1");
-
+        saveCol.addClass("col-1 saveBtn");
 
         // Apply the text
         hourCol.text(busHours[i]);
-        entryCol.text("Lorem ipsum dolor");
+        textSpot.text("");
         saveCol.text("Save");
 
         // Append all that good shit
         $(".container").append(newRow);
-        $(newRow).append(hourCol);
-        $(newRow).append(entryCol);
-        $(newRow).append(saveCol);
-
-
+        $(newRow).append(hourCol, entryCol, saveCol);
+        $(entryCol).append(textSpot);
     };
 });
 
