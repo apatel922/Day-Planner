@@ -16,17 +16,36 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.808);
+  background-color: #d9f3f3dc;
   color: black;
-  border-radius: 0;
-  border-bottom: 2px solid rgb(170, 170, 170);
   height: 200px;
+  margin: 10px;
   padding: 40px;
-  text-shadow: 2px 2px 4px #000000;
+  border-left: 15px solid #FF897C;
+  border-right: 15px solid #FF897C;
+  border-top: 1px solid #FFD2CD;
+  border-bottom: 1px solid #FFD2CD;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.10);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.10);
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.10);
+  transition: ease 0.4s;
+}
+
+.display-3 {
+  font-family: 'Josefin Sans';
+  color: #FF897C;
+  transition: ease 0.4s;
+}
+
+#currentDay {
+  color: #FF6B5C;
+  transition: ease 0.4s;
 }
 
 .container {
-  margin-top: 220px;
+  margin-top: 230px;
+  transition: ease 0.4s;
 }
 
 .description{
@@ -43,24 +62,32 @@ textarea{
   height: 80px;
   border-top: 1px solid white;
   margin-bottom: 20px;
+  transition: ease 0.8s;
 }
 
 .hour {
   background-color: #ffffff;
-  color: #05667c;
+  color: #3c9bb1;
   border-top: 1px dashed #d3d3d3;
   border-bottom: 1px dashed #d3d3d3;
   padding-top: 32px;
   text-align: center;
+  font-weight: 700;
 }
 
 .present {
   background-color: #e9e9e9;
+  border-radius: 2px;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
 }
 
 .present:hover {
   background-color: #d3d3d3;
   transition: all .2s ease-in-out;
+  -webkit-box-shadow: inset -46px 0px 65px -10px rgba(0,0,0,0.05);
+  -moz-box-shadow: inset -46px 0px 65px -10px rgba(0,0,0,0.05);
+  box-shadow: inset -46px 0px 65px -10px rgba(0,0,0,0.05);
 }
 
 .past {
@@ -74,10 +101,9 @@ textarea{
 }
 
 .saveBtn {
-  border-left: 1px solid #06AED5;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-color: #06AED5;
+  border-left: 1px solid #b6b6b6;
+  border-radius: 2px 5px 5px 2px;
+  background-color: rgb(72, 168, 185);
   color: white;
   padding-top: 32px;
   text-align: center;
@@ -89,19 +115,26 @@ textarea{
 }
 
 .saveBtn:hover {
-  background-color: #05667c;
+  background-color: #0984a0;
   transition: all .2s ease-in-out;
+}
+
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none; /*remove the resize handle on the bottom right*/
 }
 
 
 @media only screen and (max-width: 992px) {
-  .saveBtn,
-  .hour {
+  .saveBtn {
     font-size: 0.75rem;
+    min-width: 43px;
   }
-}
-
-@media only screen and (max-width: 768px) {
   .saveBtn p {
     display: none;
     font-size: 0.5rem;
@@ -109,10 +142,57 @@ textarea{
   .saveBtn i {
     display: block;
   }
-  .present {
-    max-width: 350px;
+  .display-3 {
+    font-size: 3.5rem;
+    transition: ease 0.4s;
+  }
+  .jumbotron {
+    height: 170px;
+    border-left: 15px solid #FF897C;
+    border-right: 15px solid #FF897C;
+    transition: ease 0.4s;
+    margin: 10px;
+  }
+  .container {
+    margin-top: 200px;
+    transition: ease 0.4s;
   }
   .hour {
     min-width: 80px;
+    transition: ease 0.4s;
   }
+  .present {
+    max-width: 500px;
+    transition: ease 0.4s;
+  }
+  .row {
+    margin-bottom: 10px;
+    transition: ease 0.6s;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .display-3 {
+    font-size: 3rem;
+    transition: ease 0.4s;
+  }
+  .jumbotron {
+    height: 150px;
+    transition: ease 0.4s;
+  }
+  .container {
+    margin-top: 180px;
+    transition: ease 0.4s;
+  }
+  .present {
+    max-width: 350px;
+    transition: ease 0.2s;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .jumbotron {
+    border-right: 1px solid #FF897C;
+    transition: ease 0.4s;
+    }
 }
