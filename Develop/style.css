@@ -77,6 +77,10 @@ textarea{
   cursor: pointer;
 }
 
+.saveBtn i {
+  display: none;
+}
+
 .saveBtn:hover {
   background-color: #05667c;
   transition: all .2s ease-in-out;
@@ -91,12 +95,12 @@ textarea{
 }
 
 @media only screen and (max-width: 768px) {
-  .saveBtn {
-    color: #06AED5;
+  .saveBtn p {
+    display: none;
     font-size: 0.5rem;
   }
-  .saveBtn:hover {
-    color: #05667c;
+  .saveBtn i {
+    display: block;
   }
   .present {
     max-width: 350px;

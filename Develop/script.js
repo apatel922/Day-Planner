@@ -2,7 +2,7 @@
 
 // Display timeblocks for standard business hours (9am to 5pm)
 $(document).ready(function() {
-    var busyHours = ["9am", "10am", "11am", "12am", "1pm", "2pm", "3pm", "4pm", "5pm"];
+    var busyHours = ["9 am", "10 am", "11 am", "12 am", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm"];
 
     // Current day displayed at top of calendar
     var todaysDate = new Date();
@@ -37,15 +37,20 @@ $(document).ready(function() {
         // Save Button col-1
         var saveCol = $("<div>");
         saveCol.addClass("col-1 saveBtn");
+        var saveP = $("<p>");
+        var saveIcon = $("<i>");
+        saveIcon.addClass("fas fa-save");
+         
 
         // Apply the labels
         hourCol.text(busyHours[i]);
         textSpot.text("");
-        saveCol.text("Save");
+        saveP.text("Save");
 
         // Append all that good shit
         $(".container").append(newRow);
         $(newRow).append(hourCol, entryCol, saveCol);
+        $(saveCol).append(saveP, saveIcon);
         $(entryCol).append(textSpot);
     };
 
