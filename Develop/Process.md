@@ -87,7 +87,7 @@ I came to conclusion here that I needed to have a way to call a specific row and
 textSpot.attr("id", i + 1);
 
 ```
-In other news, I couldn't wrap my head around how to insert this variable into my local storage function.  Code logic still alludes me.
+At this point though, I got a case of writer's block and couldn't wrap my head around how to rewrite my local storage function, while accounting for this ID.  Code logic still alludes me.
 
 At the end of the day, I am able to push to local storage and retain that information, even after refreshing the page.  I can't, however, pull that information back out and display it when I do refresh.  
 
