@@ -81,4 +81,32 @@ This was the hardest part for me and still has not been completely solved.  I cr
 
 I was able to capture this value in local storage, but if I entered another value in a different field, it would overwrite.
 
-I came to conclusion here that I needed to have a way to call a specific row and the only way was to create a unique ID during the loop.  
+I came to conclusion here that I needed to have a way to call a specific row and the only way was to create unique IDs during the loop.  I did this by creating a new variable that captured the incrementing the value of 'i' and attached it to every textarea being generated in a row.  
+```
+
+textSpot.attr("id", i + 1);
+
+```
+In other news, I couldn't wrap my head around how to insert this variable into my local storage function.  Code logic still alludes me.
+
+At the end of the day, I am able to push to local storage and retain that information, even after refreshing the page.  I can't, however, pull that information back out and display it when I do refresh.  
+
+I get it in concept, but not in execution.
+
+<br>
+
+---
+
+<br>
+
+## Smooth Breakpoints
+
+Front-end design will always be the aspect of development that I'll be drawn to, so I'm making sure to use these homeworks to explore the many possibilities that lie in HTML layout and CSS styling.  
+
+I did plenty of additional styling with the stock CSS provided.  I played around with 'ease' transitions and ended up putting a transition on just about everything, across all breakpoints.  This drastically improved the user experience by easing between all the breakpoints smoothly, rather snapping the viewport into a different style.
+
+![](../Assets/breakpoint_Transitions.gif)
+
+In retrospect, I realize that the experience I designed was very much catered to the high-end graphics card I have on my home PC. When I viewed the same page on my Macbook, I was greeted with a shitty, laggy experience at every breakpoint.  Not at all what I had previously designed.
+
+I now know the reason that I rarely see such smooth transitions at a breakpoint.  As designers and developers, we need to cater to the varying processing powers on different machines.  At the same time, I wonder if there is a way to provide slick transitions that will work on any computer.  
